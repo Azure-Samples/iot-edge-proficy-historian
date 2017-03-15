@@ -1,0 +1,39 @@
+{
+    "modules": [{
+        "name": "dotnet_historian_module",
+        "loader": {
+            "name": "dotnet",
+            "entrypoint": {
+                "assembly.name": "Proficy.Historian.Module",
+                "entry.type": "Proficy.Historian.Module.GatewayModule"
+            }
+        },
+        "args": {
+            "ServerName": "<HistorianServerName>",
+            "UserName": "<HistorianUserName>",
+            "Password": "<HistorianPassWord>",
+            "PrintToConsole": false,
+            "TagsToSubscribe": [
+                { "TagName": "<Tagname1>" },
+                { "TagName": "<Tagname2>", "MinimumElapsedMilliSeconds": 1000 }
+            ]
+        }
+    }, {
+        "name": "IoTHub",
+        "loader": {
+            "name": "native",
+            "entrypoint": {
+                "module.path": "iothub.dll"
+            }
+        },
+        "args": {
+            "IoTHubName": "<IoTHubName>",
+            "IoTHubSuffix": "azure-devices.net",
+            "Transport": "AMQP"
+        }
+    }],
+    "links": [{
+        "source": "dotnet_historian_module",
+        "sink": "IoTHub"
+    }]
+}
