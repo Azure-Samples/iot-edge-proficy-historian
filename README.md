@@ -23,8 +23,8 @@ subscription on a standard server which publishes the specified tags to Azure Io
 This folder contains the C# Proficy Historian module source file (GatewayModule.cs).
 
 # Building the Module
-
-Open the solution in Visual Studio and run the build command 
+To build the module, you need to get the Proficy.Historian.ClientAccess.API.dll from your Proficy Historian server and place it in the src/deps folder.
+Then, open up the solution in Visual Studio and run the build command. 
 
 # Configuring the Module
 Proficy Historian tags whose values should be published to Azure IoT Hub can be configured in the module JSON configuration.  A sample template configuration file can be found in ```samples/gateway_config.json```.  The configuration consists of a OPC-UA Application Configuration and Subscriptions section.  
