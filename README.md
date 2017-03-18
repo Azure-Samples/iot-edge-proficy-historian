@@ -3,7 +3,7 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 # Proficy Historian Module for the Azure IoT Gateway SDK
 This reference implementation demonstrates how the Azure IoT Gateway SDK can be used to connect to existing Proficy Historian servers and send JSON encoded telemetry data from these servers using the Proficy Historian SDK pub/sub format (using a JSON payload) to Azure IoT Hub. All transport protocols supported by the Gateway SDK can be used, i.e. HTTPS, AMQP and MQTT. The transport is selected in the transport setting in gateway_config.json.
 
-This module uses the Proficy Historian API, which GE has approved being included in this reposiotry.
+This module uses the Proficy Historian API, which GE has approved being included in this repository.
 However, to use the API and this module you need to connect to a properly licensed Proficy Historian. 
 
 # Azure IoT Gateway SDK compatibility
@@ -17,7 +17,7 @@ git clone --recursive https://github.com/Azure/azure-iot-gateway-sdk.git
 # Directory Structure
 
 ## /samples
-This folder contains a sample configuration that instructs a vanilla gateway host load the module and IoT Hub proxy module and configures the module to create a 
+This folder contains a sample configuration that instructs a vanilla gateway host to load the module and IoT Hub proxy module and configures the module to create a 
 subscription on a standard server which publishes the specified tags to Azure IoT Hub.
 
 ## /src
