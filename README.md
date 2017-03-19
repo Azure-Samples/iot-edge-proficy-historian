@@ -6,6 +6,13 @@ This reference implementation demonstrates how the Azure IoT Gateway SDK can be 
 This module uses the Proficy Historian API, which GE has approved being included in this repository.
 However, to use the API and this module you need to connect to a properly licensed Proficy Historian. 
 
+## History of the module
+While doing a POC with a customer of mine, they wanted to take advantage of Azure IoT Suite, but already had data collection setup,
+with data being persisted into a GE Proficy Historian.
+Because they did not want data polled multiple times and also didn't want the gateway to be installed into a very secure network,
+I created this module to subscribe to the persisted data from a replica of the Historian.
+Currently it supports subscribing to tags and getting instant notifications when these change.
+
 # Azure IoT Gateway SDK compatibility
 The current version of the Proxy module is targeted at the [Azure IoT Gateway SDK 2017-01-13 release](https://github.com/Azure/azure-iot-gateway-sdk/releases/tag/2017-01-13).
 
