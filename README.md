@@ -30,6 +30,10 @@ subscription on a standard server which publishes the specified tags to Azure Io
 ## /src
 This folder contains the C# Proficy Historian module source file (GatewayModule.cs).
 
+## /tests
+This folder contains unittests for the module.  All should pass after building the module first.
+To run the tests, please open up in Visual Studio and just run the tests.
+
 # Building the Module
 To build the module, open up the solution in Visual Studio and run the build command. 
 

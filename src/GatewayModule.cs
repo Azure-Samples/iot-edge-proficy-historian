@@ -87,7 +87,7 @@ namespace Proficy.Historian.Module
         /// Handle data change events from the Historian
         /// </summary>
         /// <param name="values">The list of changed elements</param>
-        private void Historian_DataChangedEvent(List<CurrentValue> values)
+        public void Historian_DataChangedEvent(List<CurrentValue> values)
         {
             // Run thru all received data changes
             foreach (CurrentValue cv in values)
